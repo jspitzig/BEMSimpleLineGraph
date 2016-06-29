@@ -66,8 +66,11 @@
     // Dash the y reference lines
     self.myGraph.lineDashPatternForReferenceYAxisLines = @[@(2),@(2)];
     
-    // Show the y axis values with this format string
-    self.myGraph.formatStringForValues = @"%.1f";
+    // Show the y axis values with this formatter
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    formatter.maximumFractionDigits = 1;
+    formatter.minimumFractionDigits = 1;
+    self.myGraph.formatterForValues = formatter;
     
     // Setup initial curve selection segment
     self.curveChoice.selectedSegmentIndex = self.myGraph.enableBezierCurve;

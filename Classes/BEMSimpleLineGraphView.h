@@ -347,7 +347,7 @@ IB_DESIGNABLE @interface BEMSimpleLineGraphView : UIView <UIGestureRecognizerDel
 
 
 /// Float format string to be used when formatting popover and y axis values
-@property (nonatomic, strong) NSString *formatStringForValues;
+@property (nonatomic, strong) NSFormatter * formatterForValues;
 
 
 /** If a null value is present, interpolation would draw a best fit line through the null point bound by its surrounding points.  Default: YES*/
